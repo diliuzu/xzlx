@@ -8,6 +8,8 @@ public class TbHotel {
 
     private String name;
 
+    private String englishname;
+
     private String addr;
 
     private Integer areaId;
