@@ -14,7 +14,7 @@ public class TbHotel {
 
     private Integer areaId;
 
-    private String describle;
+    private String describe;
 
     private Integer hot;
 
