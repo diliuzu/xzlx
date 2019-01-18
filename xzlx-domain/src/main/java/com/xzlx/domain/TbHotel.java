@@ -26,5 +26,7 @@ public class TbHotel {
 
     private String hotelTypeId;
 
+    private Integer level;
+
 
 }
