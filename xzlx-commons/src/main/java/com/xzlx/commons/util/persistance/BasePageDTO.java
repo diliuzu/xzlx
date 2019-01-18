@@ -3,15 +3,17 @@ package com.xzlx.commons.util.persistance;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Data
-public abstract class BasePageDTO implements Serializable {
+public  class BasePageDTO<T> implements Serializable {
 
-    protected Integer page;
+    private Integer page;
 
-    protected Integer pageSize;
+    private Integer pageSize;
 
-    protected Integer totalPage;
+    private Integer totalPage;
 
+    private List<T> entity;
 
 }
