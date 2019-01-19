@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xzlx.web.api.dao.TbCommentDAO">
+    <sql id="tbCommentColumns">
+        a.content,
+        a.created,
+        a.satisfy,
+        b.id as "tbUser.id",
+        b.nickname as "tbUser.nickname",
+        b.photo as "tbUser.photo"
+    </sql>
+    <sql id="tbCommentJoins">
+        LEFT JOIN tb_user AS b ON a.user_id=b.id
+    </sql>
+    <select id="selectTravelComment" resultType="TbCommentDTO">
+        SELECT
+        <include refid="tbCommentColumns"/>
+        FROM
+        tb_travel_comment AS a
+        <include refid="tbCommentJoins"/>
+        WHERE
+          b.id=#{travelId}
+        ORDER BY created DESC
+        LIMIT #{start},#{length}
+    </select>
+
+    <select id="selectTravelCommentCounts" resultType="java.lang.Integer">
+        SELECT COUNT(1)
+        FROM
+        tb_travel_comment AS a
+        <include refid="tbCommentJoins"/>
+        WHERE
+        b.id=#{travelId}
+    </select>
+
+
+
+</mapper>

@@ -8,15 +8,21 @@ import java.util.Date;
 public class TbUser {
     private Long id;
 
-    private String username;
+    private String name;
 
     private String password;
+
+    private String nickname;
+
+    private Integer sex;
 
     private String phone;
 
     private String email;
 
     private Date created;
+
+    private String photo;
 
     private Date updated;
 
