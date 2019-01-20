@@ -29,7 +29,7 @@ public class TbCommentServiceImpl implements TbCommentService {
     public BasePageDTO<TbCommentDTO> getComment(Integer id, BasePageDTO<TbCommentDTO> basePageDTO,String tbName) {
         initLimit(basePageDTO);
         basePageDTO.setEntity(tbCommentDAO.selectComment(id,start,length,tbName));
-        basePageDTO.setTotalPage(tbCommentDAO.selectCommentCounts(id,tbName));
+        basePageDTO.setTotalPage((int) Math.ceil(tbCommentDAO.selectCommentCounts(id,tbName)*1.0/basePageDTO.getPageSize()));
 
         return basePageDTO;
     }
