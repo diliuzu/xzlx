@@ -4,6 +4,7 @@ import com.xzlx.commons.util.persistance.BasePageDTO;
 import com.xzlx.web.api.web.dto.TbCommentDTO;
 
 public interface TbCommentService {
-    BasePageDTO<TbCommentDTO> getTravelComment(Integer travelId, BasePageDTO<TbCommentDTO> basePageDTO);
+    BasePageDTO<TbCommentDTO> getComment(Integer travelId, BasePageDTO<TbCommentDTO> basePageDTO,String tbName);
 
+    void addComment(Integer travelId, TbCommentDTO tbCommentDTO, String travel);
 }
