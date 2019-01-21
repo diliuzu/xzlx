@@ -1,5 +1,8 @@
 package com.xzlx.domain;
 
+import lombok.Data;
+
+@Data
 public class TbShop {
     private Integer id;
 
@@ -13,51 +16,11 @@ public class TbShop {
 
     private String content;
 
-    public Integer getId() {
-        return id;
-    }
+    private String describe;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    private String image;
 
-    public String getName() {
-        return name;
-    }
+    private Integer level;
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
 
-    public String getAddr() {
-        return addr;
-    }
-
-    public void setAddr(String addr) {
-        this.addr = addr == null ? null : addr.trim();
-    }
-
-    public Integer getAreaId() {
-        return areaId;
-    }
-
-    public void setAreaId(Integer areaId) {
-        this.areaId = areaId;
-    }
-
-    public Integer getHot() {
-        return hot;
-    }
-
-    public void setHot(Integer hot) {
-        this.hot = hot;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content == null ? null : content.trim();
-    }
 }
