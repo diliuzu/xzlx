@@ -7,7 +7,9 @@ import java.util.List;
 
 @Repository
 public interface TbCommentDAO {
-    List<TbCommentDTO> selectTravelComment(@Param("travelId")int travelId, @Param("start")int start,@Param("length") int length);
+    List<TbCommentDTO> selectComment(@Param("id")int id, @Param("start")int start,@Param("length") int length,@Param("tbName")String tbName);
 
-    Integer selectTravelCommentCounts(Integer travelId);
+    Integer selectCommentCounts(@Param("id")Integer id,@Param("tbName")String tbName);
+
+    void insert(@Param("id")Integer travelId, @Param("tbCommentDTO")TbCommentDTO tbCommentDTO, @Param("tbName")String tbName,@Param("targetName") String targetName);
 }
