@@ -13,6 +13,16 @@ public class TbStrategyComment {
 
     private String content;
 
+    private Integer satisfy;
+
+    public Integer getSatisfy() {
+        return satisfy;
+    }
+
+    public void setSatisfy(Integer satisfy) {
+        this.satisfy = satisfy;
+    }
+
     public Integer getId() {
         return id;
     }
