@@ -22,5 +22,7 @@ public class TbShop {
 
     private Integer level;
 
+    private Integer parentId;
+
 
 }
