@@ -35,7 +35,7 @@ public class TbStrategyDTO {
 
     private Boolean hot;
 
-    private String describes;
+    private String describe;
 
     private String content;
 
