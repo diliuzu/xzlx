@@ -41,7 +41,7 @@
         <result column="image" property="image"/>
         <result column="day" property="day"/>
         <result column="official" property="official"/>
-        <result column="describes" property="describes"/>
+        <result column="describe" property="describe"/>
         <result column="content" property="content"/>
         <result column="price" property="price"/>
         <result column="areaId" property="areaId"/>
@@ -130,7 +130,7 @@
             title,
             image,
             day,
-            describes,
+            describe,
             content,
             author,
             price,
@@ -141,7 +141,7 @@
           #{title},
           #{image},
           #{day},
-          #{describes},
+          #{describe},
           #{content},
           #{author},
           #{price},
